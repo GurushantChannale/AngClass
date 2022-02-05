@@ -1,0 +1,16 @@
+ <p *ngIf="serverCreated; else noServer">Server was created</p> <!-- * bcz it's a structural directive -->
+  <ng-template #noServer> <!-- else part -->
+   <p> No Server was created </p>
+  </ng-template> 
+ <button type="button" (click)="serverCreated = true">Create</button>
+
+ <!-- use property binding 
+  directive name is just ngStyle, [] inidicates we want to bind to some property 
+  and it's get javasScript object
+-->
+ <p [ngStyle]="{color: getColor()}">Server Status: {{serverStatus}}</p>
+
+ <!-- we can write class name in '' if class name contains - like online-class -->
+ <p [ngClass]="{online: serverStatus === 'online'}">Server Status: {{serverStatus}}</p>
+
+ <p *ngFor="let item of serverName">{{item}}</p>

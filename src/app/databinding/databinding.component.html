@@ -1,0 +1,28 @@
+<h6>Interpolations</h6>
+<p>String in the end or somthing which will be converted to string in the end.</p>
+{{'server'}} with ID {{serverID}} and it is  {{serverStatus}}
+<p>1 +1 with Interpolations : {{1+1}}</p>
+<p>calling methode with string Interpolations: {{getServerStatus()}}</p>
+<hr>
+<h6>Property Binding</h6>
+
+<p> We want to bind value to some Property here.</p>
+<p>Binding value to disabled Property</p>
+<button type="button" class="btn btn-primary" [disabled]="disableButton">With value</button>
+
+<button type="button" class="btn btn-primary" [disabled]="getButtonStatus()">With Fun</button>
+<p [innerText]="disableButton"></p>
+<p>{{disableButton}}</p>
+<p> When i should use Interpolations and propery binding</p>
+
+<h6>Event Bidning </h6>
+<p>Binding to click event here</p>
+<button type="button" class="btn btn-primary" (click)="onCreateServer()">Create Server</button>
+<p>status: {{serverCreationStatus}}</p>
+
+<p>Passing and using data with event binding</p>
+<input type="text" (input)="onUpdateServer($event)" class="form-control">
+<p>Server Name : {{serverName}}</p>
+
+<p>Two way data binding</p>
+<input type="text" [(ngModel)]="serverName" class="form-control">

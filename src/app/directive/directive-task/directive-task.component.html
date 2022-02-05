@@ -1,0 +1,5 @@
+<button type="button" class="btn btn-primary" (click)="onClick()">Display Details</button>
+<p *ngIf="toggle"> some paragraph</p>
+
+<p *ngFor="let item of logButtonClicks; let i = index" [ngStyle]="{backgroundColor: i>=5? 'blue':'transparent'}" 
+  [ngClass]="{'white-color': i>=5}"> {{item}}</p>
