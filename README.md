@@ -1,5 +1,10 @@
 # AngClass
 
+thie is create to practice
+
+Data bindings -->String Interpolation -->Property Binding -->Event Binding -->Two-way-binding
+Angular inbuilt directives --> *ngIf --> *ngFor --> ngStyle --> ngClass
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
 ## Development server
